@@ -2,6 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import VButton from './button/src/button'
 </script>
 
 <template>
@@ -14,7 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <VButton>确定</VButton>
+  <VButton type="primary">confirm</VButton>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
