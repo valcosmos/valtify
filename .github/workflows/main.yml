@@ -34,14 +34,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-          # cache: 'pnpm'
+          cache: 'pnpm'
       - run: |
-          pnpm install
-          pnpm build
+          pnpm install --frozen-lockfile
+          pnpm docs:build
 
       # Runs a set of commands using the runners shell
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder the action should deploy.
+          folder: docs/.vitepress/dist # The folder the action should deploy.
 
