@@ -48,6 +48,11 @@ jobs:
           version: 7
           run_install: false
 
+      - name: config
+        run: |
+          pnpm config set auto-install-peers true
+          pnpm config set strict-peer-dependencies false
+
       - name: Install
         run: pnpm install --shamefully-hoist
       
