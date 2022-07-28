@@ -31,11 +31,14 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 6.32.9
+          
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
           # cache: 'pnpm'
-      - run: |
+
+      - name: Install and build
+        run: |
           pnpm install
           pnpm docs:build
 
