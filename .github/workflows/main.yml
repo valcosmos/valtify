@@ -49,7 +49,7 @@ jobs:
           run_install: false
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --shamefully-hoist
       
       - name: Build
         run: pnpm docs:build
