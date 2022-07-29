@@ -1,12 +1,17 @@
 # 按钮 - Button
 
-<HelloWorld msg="Vite + Vue"/>
 
-:::demo this is hello world component
+:::demo It is a Button component
 
 ```vue
 <template>
-  <HelloWorld msg="Vite + Vue"/>
+
+  <v-button>Default Button</v-button>
+
+  <v-button type="primary">Primary Button</v-button>
+
+  <v-button type="primary" size="large">Primary Large Button</v-button>
+
 </template>
 ```
 

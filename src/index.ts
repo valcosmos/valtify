@@ -1,3 +1,3 @@
 import HelloWorld from './components/HelloWorld.vue'
-
-export default HelloWorld
+import VButton from './button'
+export default { HelloWorld, VButton }
