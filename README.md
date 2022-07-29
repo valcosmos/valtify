@@ -4,7 +4,7 @@
  
 <h3 align="center">Welcome to val-design-vue</h3>
 
-<p align="center">val-design is a simple, lightweight UI component library for <a href="https://vuejs.org/" target="_blank">Vue3</a>.</p>
+<p align="center">val-design-vue is a simple, lightweight UI component library for <a href="https://vuejs.org/" target="_blank">Vue3</a>.</p>
 
 <div align="center">
 
