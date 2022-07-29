@@ -2,9 +2,9 @@
     <img width="80px" src="https://api.valzt.cn/media/avatar_me.png" />
 </div>  
  
-<h3 align="center">Welcome to val-design-vue</h3>
+<h3 align="center">Welcome to valtify</h3>
 
-<p align="center">val-design-vue is a simple, lightweight UI component library for <a href="https://vuejs.org/" target="_blank">Vue3</a>.</p>
+<p align="center">Valtify is a simple, lightweight UI component library for <a href="https://vuejs.org/" target="_blank">Vue3</a>.</p>
 
 <div align="center">
 
