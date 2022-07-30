@@ -11,7 +11,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "test": "vitest"
+    "test": "vitest",
+    "build:component": "node ./scripts/build.js"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -28,6 +29,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "fs-extra": "^10.1.0",
     "happy-dom": "^6.0.4",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
