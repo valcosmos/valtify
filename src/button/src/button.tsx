@@ -8,7 +8,7 @@ export default defineComponent({
     const { type, size, disabled, block } = toRefs(props)
 
     return () => {
-      const defaultSlot = slots.default ? slots.default() : '按钮'
+      const defaultSlot = slots.default ? slots.default() : 'button'
       // block
 
       const blockCls = block.value ? 'v-btn--block' : ''
