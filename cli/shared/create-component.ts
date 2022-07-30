@@ -7,6 +7,7 @@ import genCoreTemplate from '../template/core'
 import { writeFileSync } from 'fs'
 import genTypesTemplate from '../template/types'
 import { genStyleTemplate } from '../template/style'
+import genTestTemplate from '../template/test'
 
 export interface ComponentMeta {
   name: string
@@ -39,6 +40,9 @@ export default function createComponent(meta: ComponentMeta) {
   // 核心文件：组件样式文件
   const styleFilePath = resolve(styleDir, `${name}.scss`)
   writeFileSync(styleFilePath, genStyleTemplate(name))
+  // 核心文件：组件测试文件
+  const testFilePath = resolve(testDir, `${name}.test.ts`)
+  writeFileSync(testFilePath, genTestTemplate(name))
 
   // 创建成功通知
   console.log(lightGreen(`➜ 组件${name}目录创建生成`))
