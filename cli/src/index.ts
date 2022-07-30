@@ -5,8 +5,6 @@ import { onCreate } from '../command/create'
 // create cmd instance
 const cmd = new Command()
 
-const CREATE_TYPES = ['component', 'lib-entry']
-
 // register a command
 cmd
   .command('create')
