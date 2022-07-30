@@ -37,7 +37,7 @@ const rollupOptions = {
 const createPackageJson = name => {
   const fileStr = `{
     "name": "${name || 'valtify'}",
-    "version": "0.0.1",
+    "version": "0.0.0",
     "main": "${name ? 'index.umd.js' : 'valtify.umd.js'}",
     "module": "${name ? 'index.es.js' : 'valtify.es.js'}",
     "author": "Cupid Valentine",
