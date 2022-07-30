@@ -6,6 +6,7 @@ import { lightBlue, lightGreen } from 'kolorist'
 import genCoreTemplate from '../template/core'
 import { writeFileSync } from 'fs'
 import genTypesTemplate from '../template/types'
+import { genStyleTemplate } from '../template/style'
 
 export interface ComponentMeta {
   name: string
@@ -35,6 +36,9 @@ export default function createComponent(meta: ComponentMeta) {
   // 核心文件：组件类型文件
   const typesFilePath = resolve(compSrcDir, name + '-type.ts')
   writeFileSync(typesFilePath, genTypesTemplate(name))
+  // 核心文件：组件样式文件
+  const styleFilePath = resolve(styleDir, `${name}.scss`)
+  writeFileSync(styleFilePath, genStyleTemplate(name))
 
   // 创建成功通知
   console.log(lightGreen(`➜ 组件${name}目录创建生成`))
