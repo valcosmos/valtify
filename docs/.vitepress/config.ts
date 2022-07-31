@@ -2,7 +2,7 @@ import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 
 const sidebar = {
   '/': [
-    { text: '快速开始', link: '/', items: [] },
+    // { text: '快速开始', link: '/', items: [] },
     {
       text: '通用',
       items: [{ text: 'Button 按钮', link: '/components/button/' }]
@@ -18,6 +18,7 @@ const sidebar = {
 export default {
   themeConfig: {
     // Type is `DefaultTheme.Config`
+     siteTitle: 'Valtify',
     sidebar
   },
   markdown: {
