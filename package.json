@@ -1,7 +1,31 @@
 {
   "name": "valtify",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/src/index.d.ts",
+  "license": "MIT",
+  "description": "A simple UI component library for Vue3",
+  "author": "Cupid Valentine",
+  "keywords": [
+    "valtify",
+    "front-end",
+    "CSS",
+    "Sass",
+    "Vue3",
+    "Component",
+    "UI",
+    "TypeScript"
+  ],
+  "homepage": "https://valtify.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valcosmos/valtify.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -12,7 +36,8 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "test": "vitest",
-    "build:component": "node ./scripts/build.js"
+    "build:component": "node ./scripts/build.js",
+    "prepublishOnly": "pnpm test run && pnpm build:component"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -36,6 +61,7 @@
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
+    "rollup-plugin-typescript2": "^0.32.1",
     "sass": "^1.54.0",
     "tailwindcss": "^3.1.6",
     "typescript": "^4.7.4",

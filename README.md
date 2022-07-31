@@ -23,4 +23,41 @@
 </div>
 
 
-# Still under development, stay tuned...
+## Description
+
+Valtify is a simple UI component library for Vue3. **Still under development, stay tuned...**
+
+## Getting Start
+
+* To check out the [docs](https://valtify.vercel.app), visit [https://valtify.vercel.app](https://valtify.vercel.app). 📚
+
+
+## Install
+
+```sh
+pnpm add valtify
+
+```
+
+## Usage
+
+In `main.ts`, import the style file.
+
+```ts
+import 'valtify/dist/style.css'
+```
+
+In the component
+
+```vue
+
+<script setup lang="ts">
+import { Button } from 'valtify'
+</script>
+
+<template>
+  <div>
+    <Button type="primary">Primary Button</Button>
+</template>
+
+```
