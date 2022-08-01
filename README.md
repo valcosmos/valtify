@@ -56,8 +56,7 @@ import { Button } from 'valtify'
 </script>
 
 <template>
-  <div>
-    <Button type="primary">Primary Button</Button>
+  <Button type="primary">Primary Button</Button>
 </template>
 
 ```
