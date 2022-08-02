@@ -37,7 +37,7 @@ const rollupOptions = {
         compilerOptions: {
           declaration: true
         },
-        exclude: ['scripts', 'docs', 'src/**/*.test.ts']
+        exclude: ['docs', 'src/**/*.test.ts']
       }
     })
   ]
