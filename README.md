@@ -60,3 +60,11 @@ import { Button } from 'valtify'
 </template>
 
 ```
+
+## Project Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/1c5535985021d103b1feed4985d982d991cc3ca1.svg "Repobeats analytics image")
+
+## License
+
+Valtify is [MIT licensed](LICENSE).
