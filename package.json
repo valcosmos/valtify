@@ -1,13 +1,13 @@
 {
   "name": "valtify",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "files": [
     "dist"
   ],
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/scripts/entry.d.ts",
   "license": "MIT",
   "description": "A simple UI component library for Vue3",
   "author": "Cupid Valentine",
