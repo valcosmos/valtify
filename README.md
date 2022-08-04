@@ -36,12 +36,11 @@ Valtify is a simple UI component library for Vue3. **Still under development, st
 
 ```sh
 pnpm add valtify
-
 ```
 
 ## Usage
 
-In `main.ts`, import the style file.
+In `main.ts`, And import stylesheets manually:.
 
 ```ts
 import 'valtify/dist/style.css'
