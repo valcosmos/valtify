@@ -1,9 +1,14 @@
 import { ExtractPropTypes, PropType } from 'vue'
 
-export const treeProps = {} as const
+export const treeProps = {
+  data: {
+    type: Object as PropType<Array<ITreeNode>>,
+    required: true
+  }
+} as const
 export type TreeProps = ExtractPropTypes<typeof treeProps>
 
-interface ITreeNode {
+export interface ITreeNode {
   label: string
   id?: string
   children?: ITreeNode[]
