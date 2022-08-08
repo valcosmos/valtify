@@ -7,7 +7,7 @@ const sidebar = {
       text: '通用',
       items: [
         { text: 'Button 按钮', link: '/components/button/' },
-        { text: 'Tree 按钮', link: '/components/tree/' },
+        { text: 'Tree 树形控件', link: '/components/tree/' },
       
       ]
     },
