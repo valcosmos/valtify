@@ -10,8 +10,15 @@ export default defineComponent({
     const innerData = ref(generateInnerTree(data.value))
 
     return () => (
-      <div class="s-tree">
-        {innerData.value.map(treeNode => treeNode.label)}
+      <div class="v-tree">
+        {innerData.value.map(treeNode => (
+          <div
+            class="v-tree-node"
+            style={{ paddingLeft: `${24 * (treeNode.level - 1)}px` }}
+          >
+            {treeNode.label}
+          </div>
+        ))}
       </div>
     )
   }
