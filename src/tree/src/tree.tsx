@@ -2,21 +2,37 @@ import { defineComponent, toRefs } from 'vue'
 import { useTree } from './composables/use-tree'
 import { TreeProps, treeProps } from './tree-type'
 
+const NODE_HEIGHT = 28
+
+const NODE_INDENT = 24
+
 export default defineComponent({
   name: 'Tree',
   props: treeProps,
   setup(props: TreeProps) {
     const { data } = toRefs(props)
 
-    const { expandedTree, toggleNode } = useTree(data)
+    const { expandedTree, toggleNode, getChildren } = useTree(data)
 
     return () => (
       <div class="v-tree">
         {expandedTree.value.map(treeNode => (
           <div
-            class="v-tree-node"
-            style={{ paddingLeft: `${24 * (treeNode.level - 1)}px` }}
+            class="v-tree-node hover:bg-slate-100 relative leading-8"
+            style={{ paddingLeft: `${NODE_INDENT * (treeNode.level - 1)}px` }}
           >
+            {/* 连接线 */}
+            {!treeNode.isLeaf && treeNode.expanded && (
+              <span
+                class="v-tree-node__vline absolute w-px bg-gray-300"
+                style={{
+                  height: `${NODE_HEIGHT * getChildren(treeNode).length}px`,
+                  left: `${NODE_INDENT * (treeNode.level - 1) + 11}px`,
+                  top: `${NODE_HEIGHT}px`
+                }}
+              />
+            )}
+
             {/* 折叠图标 */}
 
             {/* 判断当前节点是否是叶子结点 */}
