@@ -5,8 +5,6 @@ import { IInnerTreeNode, ITreeNode } from './../tree-type'
 export function useTree(node: Ref<ITreeNode[]> | ITreeNode[]) {
   const innerData = ref(generateInnerTree(unref(node)))
   const toggleNode = (node: IInnerTreeNode) => {
-    console.log(111)
-
     // node.expanded = !node.expanded
     // 在原始列表中获取该节点
     const cur = innerData.value.find(item => item.id === node.id)
