@@ -1,83 +1,54 @@
-import { defineComponent, toRefs } from 'vue'
-import { useTree } from './composables/use-tree'
-import { TreeProps, treeProps } from './tree-type'
-
-const NODE_HEIGHT = 28
-
-const NODE_INDENT = 24
+import { defineComponent, provide, SetupContext, toRefs } from 'vue'
+import useTree from './composables/use-tree'
+import { IInnerTreeNode, TreeProps, treeProps } from './tree-type'
+import STreeNode from './components/tree-node'
+import STreeNodeToggle from './components/tree-node-toggle'
+import '../style/tree.scss'
 
 export default defineComponent({
-  name: 'Tree',
+  name: 'STree',
   props: treeProps,
-  setup(props: TreeProps, { slots }) {
-    const { data, checkable } = toRefs(props)
-
-    const { expandedTree, toggleNode, getChildren, toggleCheckNode } =
-      useTree(data)
-
-    return () => (
-      <div class="v-tree">
-        {expandedTree.value.map(treeNode => (
-          <div
-            class="v-tree-node hover:bg-slate-100 relative leading-8"
-            style={{ paddingLeft: `${NODE_INDENT * (treeNode.level - 1)}px` }}
-          >
-            {/* 连接线 */}
-            {!treeNode.isLeaf && treeNode.expanded && (
-              <span
-                class="v-tree-node__vline absolute w-px bg-gray-300"
-                style={{
-                  height: `${NODE_HEIGHT * getChildren(treeNode).length}px`,
-                  left: `${NODE_INDENT * (treeNode.level - 1) + 11}px`,
-                  top: `${NODE_HEIGHT}px`
+  emits: ['lazy-load'],
+  setup(props: TreeProps, context: SetupContext) {
+    // 获取data
+    const { data } = toRefs(props)
+    const { slots } = context
+    const treeData = useTree(data.value, props, context)
+    provide('TREE_UTILS', treeData)
+    return () => {
+      return (
+        <div class="v-tree">
+          {
+            // 循环输出节点
+            treeData.expendedTree.value.map((treeNode: IInnerTreeNode) => (
+              <STreeNode {...props} treeNode={treeNode}>
+                {{
+                  content: () =>
+                    slots.content ? slots.content(treeNode) : treeNode.label,
+                  icon: () =>
+                    slots.icon ? (
+                      slots.icon({
+                        nodeData: treeNode,
+                        toggleNode: treeData.toggleNode
+                      })
+                    ) : (
+                      <STreeNodeToggle
+                        expanded={!!treeNode.expanded}
+                        onClick={() => treeData.toggleNode(treeNode)}
+                      ></STreeNodeToggle>
+                    ),
+                  loading: () =>
+                    slots.loading ? (
+                      slots.loading({ nodeData: treeData })
+                    ) : (
+                      <span class="ml-1">loading...</span>
+                    )
                 }}
-              />
-            )}
-
-            {/* 折叠图标 */}
-
-            {/* 判断当前节点是否是叶子结点 */}
-            {treeNode.isLeaf ? (
-              <span style={{ display: 'inline-block', width: '25px' }}></span>
-            ) : slots.icon ? (
-              slots.icon({ nodeData: treeNode, toggleNode })
-            ) : (
-              <svg
-                onClick={() => toggleNode(treeNode)}
-                style={{
-                  width: '18px',
-                  height: '18px',
-                  display: 'inline-block',
-                  transform: treeNode.expanded ? 'rotate(0)' : 'rotate(-90deg)'
-                }}
-                viewBox="0 0 1024 1024"
-                focusable="false"
-                data-icon="caret-down"
-                width="1em"
-                height="1em"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path>
-              </svg>
-            )}
-
-            {/* 复选框 */}
-
-            {checkable.value && (
-              <input
-                type="checkbox"
-                v-model={treeNode.checked}
-                onClick={() => toggleCheckNode(treeNode)}
-              />
-            )}
-
-            {/* 标签 */}
-
-            {slots.content ? slots.content(treeNode) : treeNode.label}
-          </div>
-        ))}
-      </div>
-    )
+              </STreeNode>
+            ))
+          }
+        </div>
+      )
+    }
   }
 })
