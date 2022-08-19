@@ -1,61 +1,26 @@
-# Valtify
+---
+layout: home
 
-<div align="center">
-    <img width="80px" src="https://api.valzt.cn/media/avatar_me.png" />
-</div>  
- 
-<h3 align="center">Welcome to valtify</h3>
+title: Valtify
+titleTemplate: A simple UI Component Library for Vue3
 
-<p align="center">Valtify is a simple, lightweight UI component library for <a href="https://vuejs.org/" target="_blank">Vue3</a>.</p>
+hero:
+  name: Valtify
+  text: A simple UI Component Library for Vue3
+  tagline: simple, lightweight, and elegant.
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /components/button/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/valcosmos/valtify
 
-<div align="center" width="100%">
-
-  <img style="display: inline-block" src="https://img.shields.io/badge/build-passing-informational?style=for-the-badge&logo=GitHub&color=181717" />
-
-  <img style="display: inline-block" src="https://img.shields.io/badge/Node.js-v16.16.0-informational?style=for-the-badge&logo=Node.js&color=339933" />
-
-  <img style="display: inline-block" src="https://img.shields.io/badge/Vue-v3.2.37-informational?style=for-the-badge&logo=Vue.js&color=4FC08D" />
-
-  <img style="display: inline-block" src="https://img.shields.io/badge/TypeScript-v4.7.4-informational?style=for-the-badge&logo=TypeScript&color=3178C6" />
-
-  <img style="display: inline-block" src="https://img.shields.io/badge/npm-v8.11.0-informational?style=for-the-badge&logo=npm&color=CB3837" />
-
-  <img style="display: inline-block" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
-  
-</div>
-
-
-## Description
-
-Valtify is a simple UI component library for Vue3. **Still under development, stay tuned...**
-
-## Getting Start
-
-* To check out the [docs](https://valtify.vercel.app), visit [https://valtify.vercel.app](https://valtify.vercel.app). 📚
-
-
-## Install
-
-```sh
-pnpm add valtify
-```
-
-## Usage
-
-In `main.ts`, import the style file.
-
-```ts
-import 'valtify/dist/style.css'
-```
-
-In the component
-
-```vue
-<script setup lang="ts">
-import { Button } from 'valtify'
-</script>
-
-<template>
-  <Button type="primary">Primary Button</Button>
-</template>
-```
+features:
+  - title: Simple
+    details: We only considered simple practical scenarios, so the components will not be complicated.
+  - title: Popular
+    details: We use popular tech stacks, build it with Vue3 TSX and Tailwind CSS.
+  - title: For Learning
+    details: We made this component library more for learning.
+---
