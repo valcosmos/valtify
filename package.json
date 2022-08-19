@@ -31,6 +31,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.ts,.tsx,.vue",
+    "format": "prettier --write ./**/*.{vue,ts,tsx,md,scss,json}",
     "prepare": "husky install",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -72,6 +73,12 @@
     "vue-tsc": "^0.40.1"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue}": "eslint --cache --fix"
+    "*.{js,ts,tsx,vue}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{html,css,scss,md}": [
+      "prettier --write"
+    ]
   }
 }
