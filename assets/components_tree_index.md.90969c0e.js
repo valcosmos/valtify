@@ -187,10 +187,10 @@ import{V as d,_ as M,c as q,a as y,w as p,b as n,d as a,r as v,o as V}from"./app
       `),n("span",{class:"token punctuation"},">")]),a(`
         `),n("span",{class:"token tag"},[n("span",{class:"token tag"},[n("span",{class:"token punctuation"},"<"),a("svg")]),a(`
           `),n("span",{class:"token attr-name"},":style"),n("span",{class:"token attr-value"},[n("span",{class:"token punctuation attr-equals"},"="),n("span",{class:"token punctuation"},'"'),a(`{
-            transform: nodeData.expanded ? `),n("span",{class:"token punctuation"},"'"),a("rotate(90deg)"),n("span",{class:"token punctuation"},"'"),a(" : "),n("span",{class:"token punctuation"},"'"),n("span",{class:"token punctuation"},"'"),a(`,
-            display: `),n("span",{class:"token punctuation"},"'"),a("inline-block"),n("span",{class:"token punctuation"},"'"),a(`,
-            margin: `),n("span",{class:"token punctuation"},"'"),a("0 5px"),n("span",{class:"token punctuation"},"'"),a(`,
-            cursor: `),n("span",{class:"token punctuation"},"'"),a("pointer"),n("span",{class:"token punctuation"},"'"),a(`
+            transform: nodeData.expanded ? 'rotate(90deg)' : '',
+            display: 'inline-block',
+            margin: '0 5px',
+            cursor: 'pointer'
           }`),n("span",{class:"token punctuation"},'"')]),a(`
           `),n("span",{class:"token attr-name"},"viewBox"),n("span",{class:"token attr-value"},[n("span",{class:"token punctuation attr-equals"},"="),n("span",{class:"token punctuation"},'"'),a("0 0 1024 1024"),n("span",{class:"token punctuation"},'"')]),a(`
           `),n("span",{class:"token attr-name"},"width"),n("span",{class:"token attr-value"},[n("span",{class:"token punctuation attr-equals"},"="),n("span",{class:"token punctuation"},'"'),a("12"),n("span",{class:"token punctuation"},'"')]),a(`
