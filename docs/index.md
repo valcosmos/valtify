@@ -19,7 +19,7 @@ hero:
 features:
   - title: Simple
     details: We only considered simple practical scenarios, so the components will not be complicated.
-  - title: Popular
+  - title: Popular tech
     details: We use popular tech stacks, build it with Vue3 TSX and Tailwind CSS.
   - title: For Learning
     details: We made this component library more for learning.
