@@ -21,6 +21,6 @@ features:
     details: We only considered simple practical scenarios, so the components will not be complicated.
   - title: Popular tech
     details: We use popular tech stacks, build it with Vue3 TSX and Tailwind CSS.
-  - title: For Learning
+  - title: For Learn
     details: We made this component library more for learning.
 ---
