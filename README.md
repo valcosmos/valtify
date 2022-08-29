@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="80px" src="https://api.valzt.cn/media/avatar_me.png" />
+    <img width="80px" src="logo.png" />
 </div>  
  
 <h3 align="center">Welcome to valtify</h3>
@@ -22,15 +22,13 @@
   
 </div>
 
-
 ## Description
 
 Valtify is a simple UI component library for Vue3. **Still under development, stay tuned...**
 
 ## Getting Start
 
-* To check out the [docs](https://valtify.vercel.app), visit [https://valtify.vercel.app](https://valtify.vercel.app). 📚
-
+- To check out the [docs](https://valtify.vercel.app), visit [https://valtify.vercel.app](https://valtify.vercel.app). 📚
 
 ## Install
 
@@ -49,7 +47,6 @@ import 'valtify/dist/style.css'
 In the component
 
 ```vue
-
 <script setup lang="ts">
 import { Button } from 'valtify'
 </script>
@@ -57,12 +54,11 @@ import { Button } from 'valtify'
 <template>
   <Button type="primary">Primary Button</Button>
 </template>
-
 ```
 
 ## Project Activity
 
-![Alt](https://repobeats.axiom.co/api/embed/1c5535985021d103b1feed4985d982d991cc3ca1.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/1c5535985021d103b1feed4985d982d991cc3ca1.svg 'Repobeats analytics image')
 
 ## License
 
