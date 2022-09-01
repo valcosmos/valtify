@@ -41,14 +41,14 @@
     "prepublishOnly": "pnpm test run && pnpm build:component"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "vue": "^3.2.38"
   },
   "devDependencies": {
     "@testing-library/vue": "^6.6.1",
     "@types/fs-extra": "^9.0.13",
-    "@types/node": "^18.7.13",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "autoprefixer": "^10.4.8",
@@ -63,14 +63,14 @@
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "rollup-plugin-typescript2": "^0.33.0",
-    "sass": "^1.54.5",
+    "sass": "^1.54.8",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
-    "vitepress": "1.0.0-alpha.12",
+    "vitepress": "1.0.0-alpha.13",
     "vitepress-theme-demoblock": "^1.4.2",
     "vitest": "^0.22.1",
-    "vue-tsc": "^0.40.1"
+    "vue-tsc": "^0.40.5"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue}": [
