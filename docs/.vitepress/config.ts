@@ -32,6 +32,7 @@ const sidebarGuide = () => [
 ]
 
 export default {
+  base: '/valtify',
   themeConfig: {
     nav: nav(),
     socialLinks: [
