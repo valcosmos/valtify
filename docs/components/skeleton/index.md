@@ -18,7 +18,7 @@
 
 ```vue
 <template>
-  <v-skeleton :active />
+  <v-skeleton :active="true" />
 </template>
 ```
 
