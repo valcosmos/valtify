@@ -9,7 +9,7 @@ export default defineComponent({
     const useShow = props =>
       computed(() => {
         if (props.hidden) return false
-        if (props.value === 0 || props.value === '') return false
+        if (props.value === 0) return false
         return true
       })
 
