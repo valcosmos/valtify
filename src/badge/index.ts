@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 import Badge from './src/badge'
 
-import './style/Badge.scss'
+import './style/badge.scss'
 
 // 具名导出
 export { Badge }
