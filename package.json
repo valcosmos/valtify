@@ -1,7 +1,7 @@
 {
   "name": "valtify",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "files": [
     "dist"
   ],
@@ -38,7 +38,7 @@
     "docs:serve": "vitepress serve docs",
     "test": "vitest",
     "build:component": "node ./scripts/build.js",
-    "prepublishOnly": "pnpm test run && pnpm build:component"
+    "prepublishOnly": "pnpm test && pnpm build:component"
   },
   "dependencies": {
     "vue": "^3.2.39"

@@ -8,4 +8,4 @@ export const treeNodeProps = {
     required: true
   }
 } as const
-export type TreeNodeProps = ExtractPropTypes<typeof treeProps>
+export type TreeNodeProps = ExtractPropTypes<typeof treeNodeProps>
