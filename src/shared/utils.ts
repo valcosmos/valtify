@@ -7,3 +7,7 @@ export function randomId(n = 8): string {
   }
   return result
 }
+
+export function isString(obj: string | number) {
+  return Object.prototype.toString.call(obj) === '[object String]'
+}

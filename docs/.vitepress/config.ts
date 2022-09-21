@@ -21,7 +21,8 @@ const sidebarGuide = () => [
     items: [
       { text: 'Button 按钮', link: '/components/button/' },
       { text: 'Tree 树形控件', link: '/components/tree/' },
-      { text: 'Skeleton 骨架屏', link: '/components/skeleton/' }
+      { text: 'Skeleton 骨架屏', link: '/components/skeleton/' },
+      { text: 'Badge 标记', link: '/components/badge/' }
     ]
   },
   { text: '导航', items: [] },
