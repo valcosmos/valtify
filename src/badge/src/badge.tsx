@@ -1,27 +1,15 @@
-import { computed, defineComponent, toRefs } from 'vue'
-import { isString } from '../../shared/utils'
+import { defineComponent } from 'vue'
+
 import { BadgeProps } from './badge-type'
+
+import { useBadge } from './composables/use-badge'
 
 export default defineComponent({
   name: 'Badge',
   props: BadgeProps,
   setup(props: BadgeProps, { slots }) {
-    const useShow = props =>
-      computed(() => {
-        if (props.hidden) return false
-        if (props.value === 0) return false
-        return true
-      })
-
-    const useBadgeContent = props =>
-      computed(() => {
-        if (!props.max || isString(props.value)) return props.value
-        if (props.value <= props.max) return props.value
-        return `${props.max}+`
-      })
-
+    const { useBadgeContent, useShow } = useBadge()
     const badgeContent = useBadgeContent(props)
-
     const isShow = useShow(props)
 
     return () => (
