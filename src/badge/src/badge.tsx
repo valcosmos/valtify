@@ -17,9 +17,12 @@ export default defineComponent({
         {slots.default?.()}
         {isShow.value && (
           <sup
-            class={`v-badge__content v-badge__content--${props.type} ${
-              props.isDot && 'is-dot'
-            } ${slots.default && 'is-fixed'}`}
+            class={[
+              'v-badge__content',
+              props.type && `v-badge__content--${props.type}`,
+              props.isDot && 'is-dot',
+              slots.default && 'is-fixed'
+            ]}
           >
             {badgeContent.value}
           </sup>
