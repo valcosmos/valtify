@@ -24,6 +24,17 @@ $teal: #009688 !default;
 $cyan: #00bcd4 !default;
 
 $--color-white: #ffffff !default;
+$--border-color-lighter: #ebeef5 !default;
+$--color-text-primary: #303133 !default;
+
+// Box-shadow
+/// boxShadow|1|Shadow|1
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default;
+// boxShadow|1|Shadow|1
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default;
+/// boxShadow|1|Shadow|1
+// $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+$--box-shadow-light: 0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017 !default;
 
 // 变量
 $prefix: "v";
@@ -72,3 +83,10 @@ $--color-success: $v-success !default;
 $--color-warning: $v-warning !default;
 $--color-info: $v-info !default;
 $--color-danger: $v-danger !default;
+
+$--card-border-radius: 6px !default;
+$--card-border-color: $--border-color-lighter !default;
+$--color-text-primary: $--color-text-primary !default;
+$--box-shadow-light: $--box-shadow-light !default;
+$--card-padding: 20px !default;
+$--card-border-color: $--border-color-lighter !default;
