@@ -7,7 +7,7 @@ export default function genCoreTemplate(name: string) {
   const propsTypeName = upperFirst(name) + 'Props'
   const propsName = name + 'Props'
   const propsFileName = name + '-type'
-  const className = 's-' + name
+  const className = 'v-' + name
 
   return `import { defineComponent, toRefs } from 'vue'
 import { ${propsTypeName}, ${propsName} } from './${propsFileName}'
