@@ -1,8 +1,13 @@
-import { SetupContext } from 'vue'
+import { FunctionalComponent, SetupContext } from 'vue'
 
-export default (
-  props: { expanded: boolean; onClick: () => void },
-  { emit }: SetupContext
+interface TreeNodeToggleProps {
+  expanded: boolean
+  onClick: () => void
+}
+
+export const TreeNodeToggle: FunctionalComponent<TreeNodeToggleProps> = (
+  props,
+  { emit }
 ) => (
   <svg
     style={{
@@ -18,3 +23,5 @@ export default (
     <path fill="currentColor" d="M384 192v640l384-320.064z"></path>
   </svg>
 )
+
+TreeNodeToggle.displayName = 'tree-node-toggle'

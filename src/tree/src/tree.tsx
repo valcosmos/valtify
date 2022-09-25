@@ -2,7 +2,7 @@ import { defineComponent, provide, SetupContext, toRefs } from 'vue'
 import useTree from './composables/use-tree'
 import { IInnerTreeNode, TreeProps, treeProps } from './tree-type'
 import STreeNode from './components/tree-node'
-import STreeNodeToggle from './components/tree-node-toggle'
+import { TreeNodeToggle } from './components/tree-node-toggle'
 import '../style/tree.scss'
 
 export default defineComponent({
@@ -13,7 +13,9 @@ export default defineComponent({
     // 获取data
     const { data } = toRefs(props)
     const { slots } = context
+
     const treeData = useTree(data.value, props, context)
+
     provide('TREE_UTILS', treeData)
     return () => {
       return (
@@ -32,10 +34,10 @@ export default defineComponent({
                         toggleNode: treeData.toggleNode
                       })
                     ) : (
-                      <STreeNodeToggle
+                      <TreeNodeToggle
                         expanded={!!treeNode.expanded}
                         onClick={() => treeData.toggleNode(treeNode)}
-                      ></STreeNodeToggle>
+                      />
                     ),
                   loading: () =>
                     slots.loading ? (
