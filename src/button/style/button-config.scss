@@ -1,74 +1,174 @@
 // 所有不同type按钮自定义样式
-@import '../../style/variables.scss';
+@import "../../style/variables.scss";
 
 // 按钮类型的配置
 $type: (
-  primary: (
-    color: $v-light-text,
-    background-color: $v-primary
-  ),
-  secondary: (
+  default: (
     color: $v-text,
     background-color: $v-block,
-    border-color: $v-line
+    border-color: $v-line,
+  ),
+  primary: (
+    color: $v-light-text,
+    background-color: $v-primary,
+  ),
+  secondary: (
+    color: $v-light-text,
+    background-color: $v-secondary,
+  ),
+  success: (
+    color: $v-light-text,
+    background-color: $v-success,
+  ),
+  info: (
+    color: $v-light-text,
+    background-color: $v-info,
+  ),
+  warning: (
+    color: $v-light-text,
+    background-color: $v-warning,
+  ),
+  danger: (
+    color: $v-light-text,
+    background-color: $v-danger,
   ),
   text: (
     padding: 0,
-    color: $v-brand-active
-  )
+    color: $v-brand-active,
+  ),
 );
 
 // 伪类的配置
 $pseudo: (
-  primary: (
-    hover: (
-      background-color: $v-primary-hover
-    ),
-    focus: (
-      background-color: $v-primary-hover
-    ),
-    active: (
-      background-color: $v-primary-active
-    ),
-    disabled: (
-      color: $v-light-text,
-      background-color: $v-primary-disabled,
-      border: none
-    )
-  ),
-  secondary: (
+  default: (
     hover: (
       border-color: $v-form-control-line-active,
-      color: $v-brand-active
+      color: $v-brand-active,
     ),
     focus: (
       border-color: $v-form-control-line-active,
-      color: $v-brand-active
+      color: $v-brand-active,
     ),
     active: (
       border-color: $v-form-control-line-active,
-      color: $v-brand-active
+      color: $v-brand-active,
     ),
     disabled: (
       color: $v-disabled-text,
       background-color: $v-disabled-bg,
-      border: 1px solid $v-disabled-line
-    )
+      border: 1px solid $v-disabled-line,
+    ),
+  ),
+  primary: (
+    hover: (
+      background-color: $v-primary-hover,
+    ),
+    focus: (
+      background-color: $v-primary-hover,
+    ),
+    active: (
+      background-color: $v-primary-active,
+    ),
+    disabled: (
+      color: $v-light-text,
+      background-color: $v-primary-disabled,
+      border: none,
+    ),
+  ),
+  secondary: (
+    hover: (
+      background-color: $v-secondary-hover,
+    ),
+    focus: (
+      background-color: $v-secondary-hover,
+    ),
+    active: (
+      background-color: $v-secondary-active,
+    ),
+    disabled: (
+      color: $v-light-text,
+      background-color: $v-secondary-disabled,
+      border: none,
+    ),
+  ),
+  success: (
+    hover: (
+      background-color: $v-success-hover,
+    ),
+    focus: (
+      background-color: $v-success-hover,
+    ),
+    active: (
+      background-color: $v-success-active,
+    ),
+    disabled: (
+      color: $v-light-text,
+      background-color: $v-success-disabled,
+      border: none,
+    ),
+  ),
+  info: (
+    hover: (
+      background-color: $v-info-hover,
+    ),
+    focus: (
+      background-color: $v-info-hover,
+    ),
+    active: (
+      background-color: $v-info-active,
+    ),
+    disabled: (
+      color: $v-light-text,
+      background-color: $v-info-disabled,
+      border: none,
+    ),
+  ),
+  warning: (
+    hover: (
+      background-color: $v-warning-hover,
+    ),
+    focus: (
+      background-color: $v-warning-hover,
+    ),
+    active: (
+      background-color: $v-warning-active,
+    ),
+    disabled: (
+      color: $v-light-text,
+      background-color: $v-warning-disabled,
+      border: none,
+    ),
+  ),
+  danger: (
+    hover: (
+      background-color: $v-danger-hover,
+    ),
+    focus: (
+      background-color: $v-danger-hover,
+    ),
+    active: (
+      background-color: $v-danger-active,
+    ),
+    disabled: (
+      color: $v-light-text,
+      background-color: $v-danger-disabled,
+      border: none,
+    ),
   ),
   text: (
     hover: (
-      color: $v-brand-active-focus
+      color: $v-brand-active-focus,
     ),
     focus: (
-      color: $v-brand-active-focus
+      color: $v-brand-active-focus,
     ),
     active: (
-      color: $v-brand-active-focus
+      color: $v-brand-active-focus,
     ),
     disabled: (
-      color: $v-disabled-text
-    )
-  )
+      color: $v-disabled-text,
+    ),
+  ),
 );
 
 // 按钮尺寸
@@ -76,14 +176,14 @@ $size: (
   small: (
     height: 24px,
     padding: 0 16px,
-    font-size: $v-font-size-sm
+    font-size: $v-font-size-sm,
   ),
   medium: (
-    font-size: $v-font-size-md
+    font-size: $v-font-size-md,
   ),
   large: (
     height: 32px,
     padding: 0 24px,
-    font-size: $v-font-size-lg
-  )
+    font-size: $v-font-size-lg,
+  ),
 );
