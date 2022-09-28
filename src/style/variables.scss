@@ -46,17 +46,41 @@ $v-font-size-lg: var(--v-font-size-md, 14px); //当组件size为''时使用此�
 $v-animation-duration-slow: var(--v-animation-duration-slow, 300ms);
 $v-animation-ease-in-out-smooth: var(--v-animation-ease-in-out-smooth, cubic-bezier(0.645, 0.045, 0.355, 1));
 $v-light-text: var(--v-light-text, #ffffff); // 有色深色背景下字体颜色（固定）
-$v-primary: var(--v-primary, #5e7ce0); // 主要按钮，同品牌色
-$v-primary-disabled: var(--v-primary-disabled, #879ada); // 主要按钮，同品牌色
-$v-primary-hover: var(--v-primary-hover, #7693f5); // 主要按钮悬停
-$v-primary-active: var(--v-primary-active, #344899); // 主要按钮激活
+// $v-primary: var(--v-primary, #5e7ce0); // 主要按钮，同品牌色
+// $v-primary-disabled: var(--v-primary-disabled, #879ada); // 主要按钮，同品牌色
+// $v-primary-hover: var(--v-primary-hover, #7693f5); // 主要按钮悬停
+// $v-primary-active: var(--v-primary-active, #344899); // 主要按钮激活
+$v-primary: var(--v-primary, $blue); // 主要按钮，同品牌色
+$v-primary-disabled: var(--v-primary-disabled, lighten($blue, 20%)); // 主要按钮，同品牌色
+$v-primary-hover: var(--v-primary-hover, lighten($blue, 10%)); // 主要按钮悬停
+$v-primary-active: var(--v-primary-active, darken($blue, 10%)); // 主要按钮激活
+// secondary
+$v-secondary: var(--v-secondary, $grey-600); // 主要按钮，同品牌色
+$v-secondary-disabled: var(--v-secondary-disabled, lighten($grey-600, 20%)); // 主要按钮，同品牌色
+$v-secondary-hover: var(--v-secondary-hover, lighten($grey-600, 10%)); // 主要按钮悬停
+$v-secondary-active: var(--v-secondary-active, darken($grey-600, 10%)); // 主要按钮激活
+// success
+$v-success: var(--v-success, $green); // 主要按钮，同品牌色
+$v-success-disabled: var(--v-success-disabled, lighten($green, 20%)); // 主要按钮，同品牌色
+$v-success-hover: var(--v-success-hover, lighten($green, 10%)); // 主要按钮悬停
+$v-success-active: var(--v-success-active, darken($green, 10%)); // 主要按钮激活
+// info
+$v-info: var(--v-info, $cyan); // 主要按钮，同品牌色
+$v-info-disabled: var(--v-info-disabled, lighten($cyan, 20%)); // 主要按钮，同品牌色
+$v-info-hover: var(--v-info-hover, lighten($cyan, 10%)); // 主要按钮悬停
+$v-info-active: var(--v-info-active, darken($cyan, 10%)); // 主要按钮激活
+// warning
+$v-warning: var(--v-warning, $orange); // 主要按钮，同品牌色
+$v-warning-disabled: var(--v-warning-disabled, lighten($orange, 20%)); // 主要按钮，同品牌色
+$v-warning-hover: var(--v-warning-hover, lighten($orange, 10%)); // 主要按钮悬停
+$v-warning-active: var(--v-warning-active, darken($orange, 10%)); // 主要按钮激活
+// danger
+$v-danger: var(--v-danger, $red); // 主要按钮，同品牌色
+$v-danger-disabled: var(--v-danger-disabled, lighten($red, 20%)); // 主要按钮，同品牌色
+$v-danger-hover: var(--v-danger-hover, lighten($red, 10%)); // 主要按钮悬停
+$v-danger-active: var(--v-danger-active, darken($red, 10%)); // 主要按钮激活
 
-$v-primary: $blue !default;
-$v-secondary: $grey-600 !default;
-$v-success: $green !default;
-$v-info: $cyan !default;
-$v-warning: $orange !default;
-$v-danger: $red !default;
+// $v-danger: $red !default;
 $v-light: $grey-100 !default;
 $v-dark: $grey-800 !default;
 
@@ -66,9 +90,9 @@ $v-disabled-bg: var(--v-disabled-bg, #c2cce5); // 正文文本
 $v-disabled-line: var(--v-disabled-line, #a9b0c0); // 正文文本
 $v-block: var(--v-block, #ffffff); // 大面积的不可折叠区块的背景色（例如顶部导航背景色）
 $v-line: var(--v-line, #adb0b8); // 边框分割线，仅用于边框
-$v-form-control-line-active: var(--v-form-control-line-active, #5e7ce0); // 表单控件边框激活色，用于获得焦点
-$v-brand-active: var(--v-brand-active, #526ecc); // 品牌色激活色（加深）
-$v-brand-active-focus: var(--v-brand-active-focus, #344899); // 品牌色焦点色（重度加深）
+$v-form-control-line-active: var(--v-form-control-line-active, $blue); // 表单控件边框激活色，用于获得焦点
+$v-brand-active: var(--v-brand-active, darken($blue, 20%)); // 品牌色激活色（加深）
+$v-brand-active-focus: var(--v-brand-active-focus, darken($blue, 30%)); // 品牌色焦点色（重度加深）
 
 $--badge-background-color: $v-danger;
 $--badge-radius: 10px !default;
@@ -92,10 +116,10 @@ $--card-padding: 20px !default;
 $--card-border-color: $--border-color-lighter !default;
 
 $--tag-primary-color: $blue !default;
-$--tag-success-color: $v-success !default;
-$--tag-warning-color: $v-warning !default;
-$--tag-danger-color: $v-danger !default;
-$--tag-info-color: $v-info !default;
+$--tag-success-color: $green !default;
+$--tag-warning-color: $orange !default;
+$--tag-danger-color: $red !default;
+$--tag-info-color: $cyan !default;
 $--tag-font-size: 12px !default;
 $--tag-border-radius: 4px !default;
 $--tag-padding: 0 10px !default;
