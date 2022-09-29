@@ -38,11 +38,11 @@
 
 ```vue
 <template>
-  <v-button type="primary" size="small">Small button</v-button>
+  <v-button class="m-rb" type="primary" size="small">Small button</v-button>
 
-  <v-button type="primary">Medium button (default size)</v-button>
+  <v-button class="m-rb" type="primary">Medium button (default size)</v-button>
 
-  <v-button type="primary" size="large">Large button</v-button>
+  <v-button class="m-rb" type="primary" size="large">Large button</v-button>
 </template>
 ```
 
