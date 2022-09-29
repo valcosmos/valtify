@@ -6,25 +6,25 @@
 
 ```vue
 <template>
-  <v-button>Default button</v-button>
+  <v-button class="m-rb">Default button</v-button>
 
-  <v-button type="primary">Primary button</v-button>
+  <v-button class="m-rb" type="primary">Primary button</v-button>
 
-  <v-button type="secondary">Secondary button</v-button>
+  <v-button class="m-rb" type="secondary">Secondary button</v-button>
 
-  <v-button type="success">Success button</v-button>
+  <v-button class="m-rb" type="success">Success button</v-button>
 
-  <v-button type="info">Info button</v-button>
+  <v-button class="m-rb" type="info">Info button</v-button>
 
-  <v-button type="warning">Warning button</v-button>
+  <v-button class="m-rb" type="warning">Warning button</v-button>
 
-  <v-button type="danger">Danger button</v-button>
+  <v-button class="m-rb" type="danger">Danger button</v-button>
 
-  <v-button type="text">Text button</v-button>
+  <v-button class="m-rb" type="text">Text button</v-button>
 </template>
 
 <style>
-.v-btn {
+.m-rb {
   margin: 0 10px 10px 0;
 }
 </style>
