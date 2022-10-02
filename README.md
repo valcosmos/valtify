@@ -60,6 +60,33 @@ import { Button } from 'valtify'
 
 ![Alt](https://repobeats.axiom.co/api/embed/1c5535985021d103b1feed4985d982d991cc3ca1.svg 'Repobeats analytics image')
 
+## Development
+
+<!-- Use Gitpod
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://valcosmos-valdesign-jeyace35t07.ws-us47.gitpod.io/) -->
+
+Use StackBlitz
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/valcosmos/valtify)
+
+
+clone locally:
+
+```bash
+
+git clone git@github.com:valcosmos/valtify.git
+
+cd valtify
+
+pnpm i
+
+pnpm docs:dev
+
+```
+
+Open your browser and visit http://localhost:5173/valtify/
+
 ## License
 
 Valtify is [MIT licensed](LICENSE).
