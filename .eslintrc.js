@@ -5,10 +5,10 @@ module.exports = {
     node: true
   },
   extends: [
-    // "eslint:recommended",
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended'
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
