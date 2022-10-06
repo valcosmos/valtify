@@ -24,7 +24,8 @@ const sidebarGuide = () => [
       { text: 'Skeleton 骨架屏', link: '/components/skeleton/' },
       { text: 'Badge 标记', link: '/components/badge/' },
       { text: 'Card 卡片', link: '/components/card/' },
-      { text: 'Tag 标记', link: '/components/tag/' }
+      { text: 'Tag 标记', link: '/components/tag/' },
+      { text: 'Pagination 分页', link: '/components/pagination/' }
     ]
   },
   { text: '导航', items: [] },
