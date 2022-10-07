@@ -32,8 +32,8 @@ export const Pager = defineComponent({
       jumpPage,
       centerPages
     } = this
-    return () => (
-      <ul>
+    return (
+      <ul class="v-pager">
         <li
           class={{ current: pageIndex === 1 }}
           onClick={() => setPageIndex(1)}
