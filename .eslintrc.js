@@ -10,10 +10,10 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   overrides: [],
-  parser: '@typescript-eslint/parser',
+  // parser: ['@typescript-eslint/parser', 'vue-eslint-parser'],
   parserOptions: {
     ecmaVersion: 'latest',
-    // parser: '@typescript-eslint/parser',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module',
     jsx: true,
     tsx: true
