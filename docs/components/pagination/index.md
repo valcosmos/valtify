@@ -1,13 +1,38 @@
 # 分页
 
-## 基础分页
+## 基本用法
 
 :::demo
 
 ```vue
 <template>
-  <VPagination />
+  <div>
+    <div v-for="(d, i) in data" :key="i">{{ d }}</div>
+
+    <VPagination
+      :total="source.length"
+      v-model="current"
+      :pageSize="pageSize"
+    />
+  </div>
 </template>
+
+<script lang="ts" setup>
+import { ref, computed } from 'vue'
+const source = Array.from({ length: 40 }, () => 1).map(
+  (item, index) => `第${index}条数据`
+)
+
+const current = ref(1)
+const pageSize = ref(10)
+
+const data = computed(() =>
+  source.slice(
+    (current.value - 1) * pageSize.value,
+    current.value * pageSize.value
+  )
+)
+</script>
 ```
 
 :::

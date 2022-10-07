@@ -3,6 +3,7 @@ import Pagination from './src/pagination'
 import Pager from './src/components/pager'
 import { installComponent } from '../install'
 import type { ValtifyOptions } from '../_utils/global-config'
+import './style/pagination.scss'
 
 // 具名导出
 export { Pagination, Pager }
