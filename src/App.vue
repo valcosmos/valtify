@@ -2,10 +2,12 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import { Icon } from './icon/index'
 </script>
 
 <template>
   <div>
+    <Icon />
     <h1 class="text-3xl font-bold underline">hello world</h1>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
