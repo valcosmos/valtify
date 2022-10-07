@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-const source = Array.from({ length: 40 }, () => 1).map(
+const source = Array.from({ length: 1000 }, () => 1).map(
   (item, index) => `第${index}条数据`
 )
 
