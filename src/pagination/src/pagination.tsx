@@ -48,6 +48,7 @@ export default defineComponent({
         <button
           disabled={disabledPrev.value}
           onClick={() => pager.value.prevPage()}
+          class={['prev', disabledPrev.value && 'disabled']}
         >
           上一页
         </button>
@@ -56,6 +57,7 @@ export default defineComponent({
         <button
           disabled={disabledNext.value}
           onClick={() => pager.value.nextPage()}
+          class={['next', disabledNext.value && 'disabled']}
         >
           下一页
         </button>

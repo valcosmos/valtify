@@ -1,17 +1,58 @@
+@import '../../style/variables.scss';
+
 .v-pagination {
   display: flex;
+  margin: 20px 0;
+
+  .prev,
+  .next {
+    margin: 0;
+    padding: 0 8px;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    &.disabled {
+      cursor: not-allowed;
+      color: darken($color: #afafaf, $amount: 10);
+      opacity: 0.6;
+    }
+  }
+  .prev {
+    margin-right: 10px;
+  }
 }
 
-.v-pager {
-  list-style: none !important;
+ul.v-pager {
   display: flex;
   padding-left: 0;
+  margin: 0;
+  padding: 0;
+
   li {
-    margin-top: 0 !important;
-    padding: 0 4px;
+    display: inline-block;
+    min-width: 32px;
+    height: 32px;
+    color: #000000d9;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+    border-radius: 2px;
     cursor: pointer;
+    transition: all 0.3s;
+
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    font-size: 12px;
+
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+
+    outline: none;
+
     &.current {
-      color: rgb(96, 96, 255);
+      color: $v-primary;
+      border-color: $v-primary;
     }
   }
 }
