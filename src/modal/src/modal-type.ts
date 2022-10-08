@@ -20,6 +20,10 @@ export const modalProps = {
   centered: {
     type: Boolean,
     default: false
+  },
+  closable: {
+    type: Boolean,
+    default: false
   }
 } as const
 
