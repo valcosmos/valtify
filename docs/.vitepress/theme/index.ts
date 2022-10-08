@@ -11,6 +11,7 @@ import { Card as VCard } from '../../../src/card'
 import { Tag as VTag } from '../../../src/tag'
 import { Icon as VIcon } from '../../../src/icon'
 import { Pagination as VPagination } from '../../../src/pagination'
+import { Modal as VModal } from '../../../src/modal'
 import 'vitepress-theme-demoblock/theme/styles/index.css'
 import '../../../src/index.scss'
 
@@ -31,6 +32,7 @@ export default {
     app.component('VTag', VTag)
     app.component('VPagination', VPagination)
     app.component('VIcon', VIcon)
+    app.component('VModal', VModal)
     app.component('DemoBlock', DemoBlock)
     app.component('Demo', Demo)
   }
