@@ -26,7 +26,8 @@ const sidebarGuide = () => [
       { text: 'Card 卡片', link: '/components/card/' },
       { text: 'Tag 标记', link: '/components/tag/' },
       { text: 'Pagination 分页', link: '/components/pagination/' },
-      { text: 'Icon 图标', link: '/components/icon/' }
+      { text: 'Icon 图标', link: '/components/icon/' },
+      { text: 'Modal 对话框', link: '/components/modal/' }
     ]
   },
   { text: '导航', items: [] },
