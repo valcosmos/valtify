@@ -1,12 +1,16 @@
 import { CSSProperties, defineComponent, toRefs } from 'vue'
 import BaseModal from './components/base-modal'
 import { ModalProps, modalProps } from './modal-type'
+
+import { XMarkIcon } from '@heroicons/vue/24/solid'
+
 export const Modal = defineComponent({
   name: 'VModal',
   props: modalProps,
   emits: ['update:modelValue'],
   setup(props: ModalProps, { slots, emit }) {
-    const { modelValue, title, width, headerCenter, centered } = toRefs(props)
+    const { modelValue, title, width, headerCenter, centered, closable } =
+      toRefs(props)
     // 动态设置居中样式
     const alignCenterStyle: CSSProperties = centered.value
       ? {
@@ -40,7 +44,16 @@ export const Modal = defineComponent({
               class={'v-modal__header'}
               style={{ textAlign: headerCenter.value ? 'center' : 'left' }}
             >
-              {title.value}
+              <span>{title.value}</span>
+              <span class={'close'}>
+                {closable.value && (
+                  <XMarkIcon
+                    onClick={() => {
+                      emit('update:modelValue', false)
+                    }}
+                  />
+                )}
+              </span>
             </div>
           )}
 
