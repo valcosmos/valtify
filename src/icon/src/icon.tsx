@@ -20,7 +20,7 @@ export default defineComponent({
     // icon font
     const fontIcon = (
       <span
-        class={[props.prefix, props.prefix + '-' + props.name]}
+        class={[props.prefix, 'iconfont', `${props.prefix}-${props.name}`]}
         style={{ fontSize: iconSize.value, color: props.color }}
       />
     )
