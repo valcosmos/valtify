@@ -9,9 +9,13 @@ import { Skeleton as VSkeleton } from '../../../src/skeleton'
 import { Badge as VBadge } from '../../../src/badge'
 import { Card as VCard } from '../../../src/card'
 import { Tag as VTag } from '../../../src/tag'
+import { Icon as VIcon } from '../../../src/icon'
 import { Pagination as VPagination } from '../../../src/pagination'
 import 'vitepress-theme-demoblock/theme/styles/index.css'
 import '../../../src/index.scss'
+
+import './assets/iconfont.css'
+import './assets/iconfont.js'
 
 export default {
   ...Theme,
@@ -26,6 +30,7 @@ export default {
     app.component('VCard', VCard)
     app.component('VTag', VTag)
     app.component('VPagination', VPagination)
+    app.component('VIcon', VIcon)
     app.component('DemoBlock', DemoBlock)
     app.component('Demo', Demo)
   }
