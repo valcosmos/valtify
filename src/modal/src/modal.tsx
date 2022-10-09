@@ -2,7 +2,7 @@ import { CSSProperties, defineComponent, toRefs } from 'vue'
 import BaseModal from './components/base-modal'
 import { ModalProps, modalProps } from './modal-type'
 
-import { XMarkIcon } from '@heroicons/vue/24/solid'
+import { CloseIcon } from '../close-icon'
 
 export const Modal = defineComponent({
   name: 'VModal',
@@ -47,11 +47,7 @@ export const Modal = defineComponent({
               <span>{title.value}</span>
               <span class={'close'}>
                 {closable.value && (
-                  <XMarkIcon
-                    onClick={() => {
-                      emit('update:modelValue', false)
-                    }}
-                  />
+                  <CloseIcon onClick={() => emit('update:modelValue', false)} />
                 )}
               </span>
             </div>
