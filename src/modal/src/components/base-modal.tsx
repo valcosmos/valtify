@@ -22,7 +22,7 @@ export const VBaseModal = defineComponent({
               onClick={() => {
                 emit('update:modalValue', false)
               }}
-              className="v-base-modal__mask"
+              class="v-base-modal__mask"
             ></div>
 
             {slots.default?.()}
