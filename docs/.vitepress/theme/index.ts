@@ -16,7 +16,7 @@ import 'vitepress-theme-demoblock/theme/styles/index.css'
 import '../../../src/index.scss'
 
 import './assets/iconfont.css'
-import './assets/iconfont.js'
+// import './assets/iconfont.js'
 
 export default {
   ...Theme,

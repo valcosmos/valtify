@@ -29,21 +29,3 @@
 ```
 
 :::
-
-## 使用 SVG 作为图标
-
-:::demo
-
-```vue
-<template>
-  <v-icon component="arrow-top" :size="40" />
-  <v-icon component="arrow-down" :size="40" />
-  <v-icon component="arrow-left" :size="40" />
-  <v-icon component="arrow-right" :size="40" />
-  <v-icon component="check" :size="40" />
-  <v-icon component="delete" :size="40" />
-  <v-icon component="close" :size="40" />
-</template>
-```
-
-:::
