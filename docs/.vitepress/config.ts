@@ -26,7 +26,10 @@ const sidebarGuide = () => [
   },
   {
     text: '导航',
-    items: [{ text: 'Pagination 分页', link: '/components/pagination/' }]
+    items: [
+      { text: 'Pagination 分页', link: '/components/pagination/' },
+      { text: 'Dropdown 下拉菜单', link: '/components/dropdown/' }
+    ]
   },
   {
     text: '反馈',
