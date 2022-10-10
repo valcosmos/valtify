@@ -1,0 +1,29 @@
+.v-dropdown {
+  /* your component style */
+  display: inline-block;
+  position: relative;
+  color: #606266;
+  font-size: 14px;
+  > span {
+    cursor: pointer;
+  }
+
+  .v-dropdown-menu {
+    padding: 10px 0;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ebeef5;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    &__item {
+      list-style: none;
+      line-height: 36px;
+      padding: 0 20px;
+      margin: 0;
+      font-size: 14px;
+      color: #606266;
+      cursor: pointer;
+      outline: 0;
+    }
+  }
+}

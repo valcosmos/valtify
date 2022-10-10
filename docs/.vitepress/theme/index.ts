@@ -12,6 +12,8 @@ import { Tag as VTag } from '../../../src/tag'
 import { Icon as VIcon } from '../../../src/icon'
 import { Pagination as VPagination } from '../../../src/pagination'
 import { Modal as VModal } from '../../../src/modal'
+import { Dropdown as VDropdown } from '../../../src/dropdown'
+import { DropdownItem as VDropdownItem } from '../../../src/dropdown'
 import 'vitepress-theme-demoblock/theme/styles/index.css'
 import '../../../src/index.scss'
 
@@ -33,6 +35,8 @@ export default {
     app.component('VPagination', VPagination)
     app.component('VIcon', VIcon)
     app.component('VModal', VModal)
+    app.component('VDropdown', VDropdown)
+    app.component('VDropdownItem', VDropdownItem)
     app.component('DemoBlock', DemoBlock)
     app.component('Demo', Demo)
   }
