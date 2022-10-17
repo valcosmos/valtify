@@ -21,44 +21,52 @@ export const Modal = defineComponent({
       : {}
 
     return () => (
-      <BaseModal
-        class={'v-modal'}
-        modelValue={modelValue.value}
-        onUpdate:modalValue={() => {
-          emit('update:modelValue')
-        }}
-      >
-        <div
-          class={'v-modal__container'}
-          style={{ width: width.value, ...alignCenterStyle }}
-        >
-          {/* 标题区 */}
-          {slots.header ? (
-            slots.header?.({
-              close: () => {
-                emit('update:modelValue', false)
-              }
-            })
-          ) : (
+      <Teleport to={'body'}>
+        <Transition name="dialog-fade">
+          <BaseModal
+            key={modelValue.value ? 1 : 2}
+            class={'v-modal'}
+            style={[!modelValue.value && 'display: none;']}
+            modelValue={modelValue.value}
+            onUpdate:modalValue={() => {
+              emit('update:modelValue')
+            }}
+          >
             <div
-              class={'v-modal__header'}
-              style={{ textAlign: headerCenter.value ? 'center' : 'left' }}
+              class={'v-modal__container'}
+              style={{ width: width.value, ...alignCenterStyle }}
             >
-              <span>{title.value}</span>
-              <span class={'close'}>
-                {closable.value && (
-                  <CloseIcon onClick={() => emit('update:modelValue', false)} />
-                )}
-              </span>
+              {/* 标题区 */}
+              {slots.header ? (
+                slots.header?.({
+                  close: () => {
+                    emit('update:modelValue', false)
+                  }
+                })
+              ) : (
+                <div
+                  class={'v-modal__header'}
+                  style={{ textAlign: headerCenter.value ? 'center' : 'left' }}
+                >
+                  <span>{title.value}</span>
+                  <span class={'close'}>
+                    {closable.value && (
+                      <CloseIcon
+                        onClick={() => emit('update:modelValue', false)}
+                      />
+                    )}
+                  </span>
+                </div>
+              )}
+
+              {/* 内容区 */}
+
+              <div class={'v-modal__body'}>{slots.default?.()}</div>
+              {/* 操作区 */}
             </div>
-          )}
-
-          {/* 内容区 */}
-
-          <div class={'v-modal__body'}>{slots.default?.()}</div>
-          {/* 操作区 */}
-        </div>
-      </BaseModal>
+          </BaseModal>
+        </Transition>
+      </Teleport>
     )
   }
 })

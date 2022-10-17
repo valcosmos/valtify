@@ -15,7 +15,7 @@ export const VBaseModal = defineComponent({
 
     return () => (
       <div>
-        {modelValue.value && (
+        {/* {modelValue.value && ( */}
           <div class={'v-base-modal'}>
             {/* 遮罩 */}
             <div
@@ -27,7 +27,7 @@ export const VBaseModal = defineComponent({
 
             {slots.default?.()}
           </div>
-        )}
+        {/* )} */}
       </div>
     )
   }
