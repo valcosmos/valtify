@@ -1,4 +1,10 @@
-import { CSSProperties, defineComponent, toRefs } from 'vue'
+import {
+  CSSProperties,
+  defineComponent,
+  Teleport,
+  toRefs,
+  Transition
+} from 'vue'
 import BaseModal from './components/base-modal'
 import { ModalProps, modalProps } from './modal-type'
 
