@@ -14,6 +14,8 @@ import { Pagination as VPagination } from '../../../src/pagination'
 import { Modal as VModal } from '../../../src/modal'
 import { Dropdown as VDropdown } from '../../../src/dropdown'
 import { DropdownItem as VDropdownItem } from '../../../src/dropdown'
+import { Tab as VTab } from '../../../src/tab'
+import { Tabs as VTabs } from '../../../src/tab'
 import 'vitepress-theme-demoblock/theme/styles/index.css'
 import '../../../src/index.scss'
 
@@ -37,6 +39,8 @@ export default {
     app.component('VModal', VModal)
     app.component('VDropdown', VDropdown)
     app.component('VDropdownItem', VDropdownItem)
+    app.component('VTab', VTab)
+    app.component('VTabs', VTabs)
     app.component('DemoBlock', DemoBlock)
     app.component('Demo', Demo)
   }
