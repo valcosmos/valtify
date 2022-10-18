@@ -28,7 +28,7 @@ Valtify is a simple UI component library for Vue3. **Still under development, st
 
 ## Getting Start
 
-- To check out the [docs](https://valtify.vercel.app), visit [https://valtify.vercel.app](https://valtify.vercel.app). 📚
+- To check out the [docs](https://valcosmos.github.io/valtify/), visit [https://valcosmos.github.io/valtify/](https://valcosmos.github.io/valtify/). 📚
 
 ## Install
 
