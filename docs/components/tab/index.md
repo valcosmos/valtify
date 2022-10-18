@@ -1,8 +1,6 @@
-# Tab 页签
+# Tab 标签页
 
-## 基础
-
-v-tabs 包裹若干 v-tab 即可，设置`v-model`控制激活页签 id
+## 基础Tab
 
 :::demo
 
@@ -31,9 +29,7 @@ const activeTab = ref('tab1')
 :::
 
 
-## 关闭、新增标签
-
-添加 closable 和 addable 课关闭、新增标签。 添加 closable 和 addable 课关闭、新增标签。
+## 关闭、新增Tab
 
 :::demo
 
