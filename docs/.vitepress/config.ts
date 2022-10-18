@@ -43,6 +43,7 @@ const sidebarGuide = () => [
     text: '数据展示',
     items: [
       { text: 'Card 卡片', link: '/components/card/' },
+      { text: 'Tab 标签页', link: '/components/tab/' },
       { text: 'Badge 标记', link: '/components/badge/' },
       { text: 'Tag 标记', link: '/components/tag/' },
       { text: 'Tree 树形控件', link: '/components/tree/' }
