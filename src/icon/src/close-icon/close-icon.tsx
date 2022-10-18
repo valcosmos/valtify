@@ -30,7 +30,7 @@ export const CloseIcon: FunctionalComponent<IconProps> = ({
         fill: iconColor,
         stroke: iconColor
       }}
-      onClick={e => onClick?.(e)}
+      onClick={onClick}
     >
       <path
         stroke-linecap="round"
