@@ -8,7 +8,7 @@ import {
 import BaseModal from './components/base-modal'
 import { ModalProps, modalProps } from './modal-type'
 
-import { CloseIcon } from '../close-icon'
+import { CloseIcon } from '../../icon'
 
 export const Modal = defineComponent({
   name: 'VModal',
