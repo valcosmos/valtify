@@ -41,6 +41,7 @@
     "prepublishOnly": "pnpm test && pnpm build:component"
   },
   "dependencies": {
+    "@floating-ui/dom": "^0.5.3",
     "@heroicons/vue": "^2.0.12",
     "vue": "^3.2.40"
   },
