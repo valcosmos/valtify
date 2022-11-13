@@ -17,21 +17,33 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script>
 import { ref, computed } from 'vue'
-const source = Array.from({ length: 1000 }, () => 1).map(
-  (item, index) => `第${index}条数据`
-)
 
-const current = ref(1)
-const pageSize = ref(10)
+export default defineComponent({
+  setup() {
+    const source = Array.from({ length: 1000 }, () => 1).map(
+      (item, index) => `第${index}条数据`
+    )
 
-const data = computed(() =>
-  source.slice(
-    (current.value - 1) * pageSize.value,
-    current.value * pageSize.value
-  )
-)
+    const current = ref(1)
+    const pageSize = ref(10)
+
+    const data = computed(() =>
+      source.slice(
+        (current.value - 1) * pageSize.value,
+        current.value * pageSize.value
+      )
+    )
+
+    return {
+      source,
+      current,
+      pageSize,
+      data
+    }
+  }
+})
 </script>
 ```
 

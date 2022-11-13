@@ -1,7 +1,16 @@
-@import "../../style/variables.scss";
+@import '../../style/variables.scss';
 
-@mixin generateTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight) {
-  background-color: mix($--tag-primary-color, $--color-white, $backgroundColorWeight);
+@mixin generateTheme(
+  $backgroundColorWeight,
+  $borderColorWeight,
+  $fontColorWeight,
+  $hoverColorWeight
+) {
+  background-color: mix(
+    $--tag-primary-color,
+    $--color-white,
+    $backgroundColorWeight
+  );
   border-color: mix($--tag-primary-color, $--color-white, $borderColorWeight);
   color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
 
@@ -11,7 +20,11 @@
 
   // type
   &--success {
-    background-color: mix($--tag-success-color, $--color-white, $backgroundColorWeight);
+    background-color: mix(
+      $--tag-success-color,
+      $--color-white,
+      $backgroundColorWeight
+    );
     border-color: mix($--tag-success-color, $--color-white, $borderColorWeight);
     color: mix($--tag-success-color, $--color-white, $fontColorWeight);
 
@@ -20,7 +33,11 @@
     }
   }
   &--warning {
-    background-color: mix($--tag-warning-color, $--color-white, $backgroundColorWeight);
+    background-color: mix(
+      $--tag-warning-color,
+      $--color-white,
+      $backgroundColorWeight
+    );
     border-color: mix($--tag-warning-color, $--color-white, $borderColorWeight);
     color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
 
@@ -29,7 +46,11 @@
     }
   }
   &--danger {
-    background-color: mix($--tag-danger-color, $--color-white, $backgroundColorWeight);
+    background-color: mix(
+      $--tag-danger-color,
+      $--color-white,
+      $backgroundColorWeight
+    );
     border-color: mix($--tag-danger-color, $--color-white, $borderColorWeight);
     color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
 
@@ -38,7 +59,11 @@
     }
   }
   &--info {
-    background-color: mix($--tag-info-color, $--color-white, $backgroundColorWeight);
+    background-color: mix(
+      $--tag-info-color,
+      $--color-white,
+      $backgroundColorWeight
+    );
     border-color: mix($--tag-info-color, $--color-white, $borderColorWeight);
     color: mix($--tag-info-color, $--color-white, $fontColorWeight);
 
@@ -80,11 +105,11 @@
 
   // effect
   &--dark {
-    @include generateTheme(100%, 100%, 0, 80%);
+    @include generateTheme(100%, 100%, 0%, 80%);
   }
 
   &--plain {
-    @include generateTheme(0, 40%, 100%, 100%);
+    @include generateTheme(0%, 40%, 100%, 100%);
   }
 }
 

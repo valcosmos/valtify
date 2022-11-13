@@ -3,6 +3,11 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import { Icon } from './icon/index'
+import { Button } from './button'
+
+function handleClick() {
+  console.log(111)
+}
 </script>
 
 <template>
@@ -16,7 +21,7 @@ import { Icon } from './icon/index'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <VButton type="primary">confirm</VButton>
+  <Button type="primary" @click="handleClick">confirm</Button>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
