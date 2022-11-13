@@ -21,6 +21,6 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "docs/.vitepress/theme"
-, "src/base-popover/base-popover.scss"  ],
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

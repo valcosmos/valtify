@@ -1,6 +1,6 @@
 # Tab 标签页
 
-## 基础Tab
+## 基础 Tab
 
 :::demo
 
@@ -13,7 +13,7 @@
   </v-tabs>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const activeTab = ref('tab1')
@@ -28,8 +28,7 @@ const activeTab = ref('tab1')
 
 :::
 
-
-## 关闭、新增Tab
+## 关闭、新增 Tab
 
 :::demo
 
@@ -48,4 +47,3 @@ const activeTab = ref('tab1')
 ```
 
 :::
-

@@ -1,3 +1,4 @@
+import { defineConfig } from 'vitepress'
 import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 import { version } from '../../package.json'
 
@@ -45,15 +46,15 @@ const sidebarGuide = () => [
       { text: 'Card 卡片', link: '/components/card/' },
       { text: 'Tab 标签页', link: '/components/tab/' },
       { text: 'Badge 标记', link: '/components/badge/' },
-      { text: 'Tag 标记', link: '/components/tag/' },
-      { text: 'Tree 树形控件', link: '/components/tree/' }
+      { text: 'Tag 标记', link: '/components/tag/' }
+      // { text: 'Tree 树形控件', link: '/components/tree/' }
     ]
   },
   { text: '布局', items: [] }
 ]
 
-export default {
-  base: '/valtify',
+export default defineConfig({
+  // base: '/valtify',
   themeConfig: {
     nav: nav(),
     socialLinks: [
@@ -70,10 +71,12 @@ export default {
     }
   },
   markdown: {
-    config(md) {
+    config: md => {
       // u can use `markdown-it` plugin here
       // const { demoBlockPlugin } = require('vitepress-theme-demoblock')
-      md.use(demoBlockPlugin)
+      md.use(demoBlockPlugin, {
+        cssPreprocessor: 'scss'
+      })
     }
   }
-}
+})
