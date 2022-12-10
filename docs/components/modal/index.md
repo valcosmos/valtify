@@ -13,11 +13,11 @@
   </v-modal>
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue'
 export default defineComponent({
   setup() {
-    const modalVisible = ref < boolean > false
+    const modalVisible = ref<boolean>(false)
 
     const showModal = () => (modalVisible.value = true)
 
