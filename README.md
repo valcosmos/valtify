@@ -38,7 +38,7 @@ pnpm add valtify
 
 ## Usage
 
-In `main.ts`, And import stylesheets manually:.
+In `main.ts`, And import stylesheets manually:
 
 ```ts
 import 'valtify/dist/style.css'
