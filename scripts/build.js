@@ -1,12 +1,19 @@
 // import the build method of vite, use it to create
 
-const path = require('path')
-const { defineConfig, build } = require('vite')
-const vue = require('@vitejs/plugin-vue')
-const vueJSX = require('@vitejs/plugin-vue-jsx')
-const fsExtra = require('fs-extra')
-const fs = require('fs')
-const tsPlugin = require('rollup-plugin-typescript2')
+// const path = require('path')
+// const { defineConfig, build } = require('vite')
+// const vue = require('@vitejs/plugin-vue')
+// const vueJSX = require('@vitejs/plugin-vue-jsx')
+// const fsExtra = require('fs-extra')
+// const fs = require('fs')
+// const tsPlugin = require('rollup-plugin-typescript2')
+import path from 'path'
+import { defineConfig, build } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJSX from '@vitejs/plugin-vue-jsx'
+import fs from 'fs'
+import tsPlugin from 'rollup-plugin-typescript2'
+import { dirname } from 'dirname-filename-esm'
 
 // base config (entry file and output dir)
 const baseConfig = defineConfig({
@@ -14,6 +21,8 @@ const baseConfig = defineConfig({
   publicDir: false,
   plugins: [vue(), vueJSX()]
 })
+
+const __dirname = dirname(import.meta)
 // entry dir
 const entryFile = path.resolve(__dirname, './entry.ts')
 

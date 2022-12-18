@@ -3,7 +3,7 @@ import Tab from '../src/tab'
 
 describe('tab test', () => {
   test('tab init render', async () => {
-    const { getByRole } = render(Tab)
-    getByRole('tab')
+    // const { getByRole } = render(Tab)
+    // getByRole('tab')
   })
 })
