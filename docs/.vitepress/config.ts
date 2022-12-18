@@ -55,7 +55,7 @@ const sidebarGuide = () => [
 ]
 
 export default defineConfig({
-  // base: '/valtify',
+  base: '/valtify',
   themeConfig: {
     nav: nav(),
     socialLinks: [
