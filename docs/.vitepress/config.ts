@@ -36,7 +36,8 @@ const sidebarGuide = () => [
     text: '反馈',
     items: [
       { text: 'Modal 对话框', link: '/components/modal/' },
-      { text: 'Skeleton 骨架屏', link: '/components/skeleton/' }
+      { text: 'Skeleton 骨架屏', link: '/components/skeleton/' },
+      { text: 'Drawer 抽屉', link: '/components/drawer/' }
     ]
   },
   { text: '数据录入', items: [] },
