@@ -1,28 +1,16 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import { Icon } from './icon/index'
-import { Button } from './button'
+import { ref } from 'vue'
 
-function handleClick() {
-  console.log(111)
+const visible = ref<boolean>(false)
+const showDrawer = () => {
+  visible.value = true
 }
 </script>
 
 <template>
-  <div>
-    <Icon />
-    <h1 class="text-3xl font-bold underline">hello world</h1>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <Button type="primary" @click="handleClick">confirm</Button>
-  <HelloWorld msg="Vite + Vue" />
+  <v-button type="primary" @click="showDrawer">openDrawer</v-button>
+
+  <v-drawer v-model:visible="visible" />
 </template>
 
 <style scoped>
