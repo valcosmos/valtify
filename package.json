@@ -1,7 +1,7 @@
 {
   "name": "valtify",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "files": [
     "dist"
   ],
@@ -22,7 +22,7 @@
     "UI",
     "TypeScript"
   ],
-  "homepage": "https://valtify.vercel.app",
+  "homepage": "https://valcosmos.github.io/valtify/",
   "repository": {
     "type": "git",
     "url": "https://github.com/valcosmos/valtify.git"
