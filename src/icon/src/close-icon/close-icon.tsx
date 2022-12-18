@@ -17,7 +17,7 @@ export const CloseIcon: FunctionalComponent<IconProps> = ({
       : size
     : undefined
 
-  const iconColor = color || 'black'
+  const iconColor = color || 'currentcolor'
 
   return (
     <svg
