@@ -10,8 +10,8 @@ import { ModalProps, modalProps } from './modal-type'
 
 import { CloseIcon } from '../../icon'
 
-export const Modal = defineComponent({
-  name: 'VModal',
+export default defineComponent({
+  name: 'Modal',
   props: modalProps,
   emits: ['update:modelValue'],
   setup(props: ModalProps, { slots, emit }) {
@@ -76,5 +76,3 @@ export const Modal = defineComponent({
     )
   }
 })
-
-export default Modal
