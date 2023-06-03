@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="80px" src="logo.png" />
+    <img width="80px" src="logo.svg" />
 </div>  
  
 <h3 align="center">Welcome to valtify</h3>
