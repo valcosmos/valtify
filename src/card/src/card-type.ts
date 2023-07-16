@@ -1,5 +1,5 @@
 import { ExtractPropTypes, PropType } from 'vue'
-import type { StyleValue } from 'vue'
+import type { CSSProperties } from 'vue'
 
 type CardType = 'always' | 'hover' | 'never'
 
@@ -9,8 +9,8 @@ export const cardProps = {
     default: ''
   },
   bodyStyle: {
-    type: String as PropType<StyleValue>,
-    default: ''
+    type: Object as PropType<CSSProperties>,
+    default: () => ({})
   },
   shadow: {
     type: String as PropType<CardType>,

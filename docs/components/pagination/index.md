@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
+import { ref, computed, defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {

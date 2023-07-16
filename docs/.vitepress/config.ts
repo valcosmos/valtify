@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { demoBlockPlugin } from 'vitepress-theme-demoblock'
+import { demoBlockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 import { version } from '../../package.json'
 
 const nav = () => [
@@ -79,5 +79,8 @@ export default defineConfig({
         cssPreprocessor: 'scss'
       })
     }
+  },
+  vite: {
+    plugins: [demoblockVitePlugin()]
   }
 })

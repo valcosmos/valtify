@@ -2,7 +2,7 @@
 
 ## 普通卡片
 
-:::demo It is a Card component
+:::demo
 
 ```vue
 <template>
@@ -42,7 +42,7 @@
 
 ## 自定义卡片 body 样式
 
-:::demo It is a Button component
+:::demo
 
 ```vue
 <template>

@@ -2,7 +2,7 @@
 
 ## 基础功能
 
-:::demo 基础功能
+:::demo
 
 ```vue
 <template>
@@ -14,7 +14,7 @@
 
 ## 动画
 
-:::demo 动画
+:::demo
 
 ```vue
 <template>

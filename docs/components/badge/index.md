@@ -2,7 +2,7 @@
 
 ## 普通标记
 
-:::demo 普通标记（不同类型）
+:::demo
 
 ```vue
 <template>
@@ -36,7 +36,7 @@
 
 ## 小圆点
 
-:::demo 小圆点
+:::demo
 
 ```vue
 <template>
@@ -50,7 +50,7 @@
 
 ## 自定义最大值
 
-:::demo 小圆点
+:::demo
 
 ```vue
 <template>
@@ -64,7 +64,7 @@
 
 ## 隐藏与显示
 
-:::demo 小圆点
+:::demo
 
 ```vue
 <template>

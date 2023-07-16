@@ -2,7 +2,7 @@
 
 ## 普通抽屉
 
-:::demo It is a Drawer component
+:::demo
 
 ```vue
 <script lang="ts">

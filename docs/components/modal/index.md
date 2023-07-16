@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { ref, defineComponent } from 'vue'
 export default defineComponent({
   setup() {
     const modalVisible = ref<boolean>(false)
