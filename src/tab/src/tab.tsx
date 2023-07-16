@@ -12,6 +12,9 @@ export default defineComponent({
       Array<{ id: string; title: string }>
     >
 
+    console.log(activeTab)
+    console.log(tabsData)
+
     tabsData.value.push({ id: id.value, title: title.value })
 
     return () => (

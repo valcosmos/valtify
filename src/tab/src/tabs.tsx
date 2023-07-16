@@ -5,7 +5,7 @@ import '../style/tabs.scss'
 export default defineComponent({
   name: 'VTabs',
   props: {
-    modelValue: {
+    active: {
       type: String,
       default: ''
     },
@@ -18,14 +18,14 @@ export default defineComponent({
       default: false
     }
   },
-  emits: ['update:modelValue'],
+  emits: ['update:active'],
   setup(props, { slots }) {
     const tabsData = ref<
       Array<{ id: string; title: string; type?: 'random'; content?: string }>
     >([])
     provide('tabs-data', tabsData)
 
-    const activeTab = ref(props.modelValue)
+    const activeTab = ref(props.active)
     provide('active-tab', activeTab)
 
     const changeTab = (tabId: string) => {
@@ -33,7 +33,7 @@ export default defineComponent({
     }
 
     const closeTab = (tabId: string) => {
-      const tabIndex = tabsData.value.findIndex((item) => item.id === tabId)
+      const tabIndex = tabsData.value.findIndex(item => item.id === tabId)
       tabsData.value.splice(tabIndex, 1)
     }
 
@@ -54,7 +54,7 @@ export default defineComponent({
       <div class={'v-tabs'}>
         {/* nav */}
         <ul class={'v-tabs__nav'}>
-          {tabsData.value.map((tab) => (
+          {tabsData.value.map(tab => (
             <li
               onClick={() => changeTab(tab.id)}
               class={tab.id === activeTab.value ? 'active' : ''}
@@ -85,8 +85,8 @@ export default defineComponent({
 
         {/* show new content */}
         {tabsData.value
-          .filter((tab) => tab.type === 'random')
-          .map((tab) => (
+          .filter(tab => tab.type === 'random')
+          .map(tab => (
             <div class={'v-tab'}>{tab.content}</div>
           ))}
       </div>

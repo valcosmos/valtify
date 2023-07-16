@@ -6,7 +6,7 @@
 
 ```vue
 <template>
-  <v-tabs v-model="activeTab">
+  <v-tabs v-model:active="activeTab">
     <v-tab id="tab1" title="Tab1">Tab1 Content</v-tab>
     <v-tab id="tab2" title="Tab2">Tab2 Content</v-tab>
     <v-tab id="tab3" title="Tab3">Tab3 Content</v-tab>
@@ -34,7 +34,7 @@ const activeTab = ref('tab1')
 
 ```vue
 <template>
-  <v-tabs v-model="activeTab" closable addable>
+  <v-tabs v-model:active="activeTab" closable addable>
     <v-tab id="tab1" title="Tab1">Tab1 Content</v-tab>
     <v-tab id="tab2" title="Tab2">Tab2 Content</v-tab>
     <v-tab id="tab3" title="Tab3">Tab3 Content</v-tab>

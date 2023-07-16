@@ -2,7 +2,7 @@
 
 ## 不同类型的 Tag
 
-:::demo It is a Button component
+:::demo
 
 ```vue
 <template>
@@ -24,7 +24,7 @@
 
 ## 不同尺寸的 Tag
 
-:::demo It is a Button component
+:::demo
 
 ```vue
 <template>
