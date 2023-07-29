@@ -2,7 +2,7 @@ import { defineComponent, toRefs, Ref, inject } from 'vue'
 import { TabProps, tabProps } from './tab-type'
 
 export default defineComponent({
-  name: 'Tab',
+  name: 'VTab',
   props: tabProps,
   setup(props: TabProps, { slots }) {
     const { title, id } = toRefs(props)

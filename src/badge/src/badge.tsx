@@ -1,11 +1,9 @@
 import { defineComponent } from 'vue'
-
 import { BadgeProps } from './badge-type'
-
 import { useBadge } from './composables/use-badge'
 
 export default defineComponent({
-  name: 'Badge',
+  name: 'VBadge',
   props: BadgeProps,
   setup(props: BadgeProps, { slots }) {
     const { useBadgeContent, useShow } = useBadge()

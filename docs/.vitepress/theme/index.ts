@@ -5,7 +5,7 @@ import '../../../src/index.scss'
 import valtify from '../../../scripts/entry'
 import './assets/iconfont.css'
 import { useComponents } from './useComponents'
-// import './assets/iconfont.js'
+import './assets/iconfont.js'
 
 export default {
   ...Theme,
