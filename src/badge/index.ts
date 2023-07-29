@@ -1,6 +1,5 @@
 import type { App } from 'vue'
 import Badge from './src/badge'
-
 import './style/badge.scss'
 
 // 具名导出

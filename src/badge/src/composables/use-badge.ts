@@ -13,7 +13,8 @@ export const useBadge = () => {
   const useBadgeContent = (props: BadgeProps) =>
     computed(() => {
       if (!props.max || isString(props.value)) return props.value
-      if (props.value <= props.max) return props.value
+      if (typeof props.value === 'number' && props.value <= props.max)
+        return props.value
       return `${props.max}+`
     })
 
